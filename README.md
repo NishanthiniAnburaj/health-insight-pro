@@ -1,73 +1,292 @@
-# Welcome to your Lovable project
+# 🏥 Smart Clinical Decision Support System (CDSS)
 
-## Project info
+A **Smart Clinical Decision Support System (CDSS)** that helps doctors analyze patient data and receive rule-based medical recommendations.  
+The system improves decision making by detecting risks, generating alerts, and suggesting possible medical conditions using patient vitals, symptoms, and historical data.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+This project demonstrates how **data-driven healthcare tools** can support doctors in identifying potential medical risks early and improving patient care.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+# 🚀 Features
 
-**Use Lovable**
+## 🔐 Doctor Authentication
+- Secure login system for doctors.
+- Only authorized medical staff can access patient data.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 👤 Patient Registration & Management
+Doctors can:
+- Add new patients
+- View patient records
+- Store medical history
 
-**Use your preferred IDE**
+Stored information includes:
+- Name
+- Age
+- Gender
+- Medical history
+- Current medications
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🩺 Clinical Data Entry
+Doctors can record patient vitals and symptoms including:
 
-Follow these steps:
+- Temperature
+- Blood Pressure
+- Heart Rate
+- Blood Sugar Level
+- Oxygen Level
+- Symptoms
+- Current Medicines
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## ⚙️ Clinical Rule Engine
+A rule-based engine analyzes patient data and generates risk alerts.
 
-# Step 3: Install the necessary dependencies.
-npm i
+Example rules:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+- **Blood Pressure > 140/90 → Hypertension Risk**
+- **Blood Sugar > 200 → Diabetes Risk**
+- **Temperature > 102 + cough → Possible Infection**
+
+---
+
+## 💊 Drug Interaction Detection
+Detects dangerous medication combinations.
+
+Example:
+- **Warfarin + Aspirin → Internal bleeding risk warning**
+
+---
+
+## 🚨 Emergency Risk Detection
+Identifies critical health conditions based on vitals.
+
+Example:
+- **Heart Rate > 120 AND Blood Pressure < 90 → Possible Shock Alert**
+
+---
+
+## 🔍 Symptom-Based Disease Suggestion
+Suggests possible medical conditions based on symptoms.
+
+Example:
+
+Symptoms:
+- Fever
+- Cough
+- Fatigue
+
+Possible conditions:
+- Viral Infection
+- Flu
+- Respiratory Infection
+
+---
+
+## 🏥 Department Recommendation
+Suggests the correct hospital department.
+
+Examples:
+
+| Symptom | Recommended Department |
+|--------|------------------------|
+| Chest Pain | Cardiology |
+| Severe Headache | Neurology |
+| Breathing Difficulty | Pulmonology |
+
+---
+
+## 🧠 Explainable Recommendations
+Every prediction includes a **clear explanation** so doctors understand why the system generated the alert.
+
+Example:
+
+Hypertension Risk  
+Reason:
+- BP = 160/100  
+- Age above 50 increases risk
+
+---
+
+## 📊 Patient Risk Score
+Generates risk scores for possible conditions such as:
+
+- Heart Disease
+- Diabetes
+- Infection
+
+---
+
+## 📋 Alert Dashboard
+Displays all alerts in one place:
+
+- Risk Alerts
+- Drug Interaction Warnings
+- Emergency Alerts
+
+---
+
+## 📝 Automatic Case Summary
+Automatically generates a report containing:
+
+- Patient details
+- Detected risks
+- Recommended actions
+- Suggested department
+
+---
+
+## 📚 Patient History Analysis
+The system analyzes **previous patient visits** along with current symptoms.
+
+Example:
+
+Past Visit:
+- Chest Pain
+
+Current Visit:
+- Chest Pain
+- Shortness of Breath
+
+Output:
+- Possible heart disease progression
+- Recommend cardiology consultation
+
+---
+
+## 🔒 Security Features
+- Role-based access control
+- Secure patient data storage
+- Audit logs of doctor actions
+
+---
+
+# ⚙️ Tech Stack
+
+### Frontend
+- HTML
+- CSS
+- JavaScript
+
+### Backend
+- Node.js
+- Express.js
+
+### Database
+- MySQL / PostgreSQL
+
+---
+
+# 🏗️ System Architecture
+
+Doctor Interface  
+↓  
+Backend API (Node.js + Express)  
+↓  
+Clinical Rule Engine  
+↓  
+Patient Database  
+↓  
+Alerts & Recommendations  
+
+---
+
+# 🔄 Workflow
+
+1. Doctor logs into the system  
+2. Doctor selects or registers a patient  
+3. Patient history is retrieved  
+4. Doctor enters current symptoms and vitals  
+5. System compares with previous records  
+6. Clinical rule engine analyzes data  
+7. Drug interaction check is performed  
+8. Emergency risk detection runs  
+9. Disease prediction is generated  
+10. Department recommendation is provided  
+11. Risk score is calculated  
+12. Explainable recommendations are shown  
+13. Patient report is generated  
+
+---
+
+# 📂 Project Structure
 ```
+cdss-project
+│
+├── frontend
+│ ├── index.html
+│ ├── dashboard.html
+│ ├── patient-form.html
+│ └── styles.css
+│
+├── backend
+│ ├── server.js
+│ ├── routes
+│ ├── controllers
+│ └── ruleEngine.js
+│
+├── database
+│ └── schema.sql
+│
+└── README.md
 
-**Edit a file directly in GitHub**
+```
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+# ▶️ Installation
 
-**Use GitHub Codespaces**
+### 1️⃣ Clone the repository
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+git clone https://github.com/NishanthiniAnburaj/health-insight-pro
+```
+2️⃣ Install dependencies
+```
+npm install
+```
+3️⃣ Start the server
+```
+node server.js
+```
+4️⃣ Open the application
+```
+http://localhost:3000
+```
+## 📊 Example Use Case
 
-## What technologies are used for this project?
+Doctor enters:
 
-This project is built with:
+Age: 60
+BP: 170/110
+Sugar: 230
+Symptoms: Chest pain, fatigue
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+System Output:
 
-## How can I deploy this project?
+⚠ Hypertension Risk
+⚠ Diabetes Risk
+🚨 Possible Heart Disease Risk
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Recommended Department: Cardiology
 
-## Can I connect a custom domain to my Lovable project?
+## 🎯 Project Goal
 
-Yes, you can!
+The goal of this system is to demonstrate how clinical decision support tools can assist healthcare professionals in identifying risks earlier and making informed medical decisions.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📌 Future Improvements
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Machine Learning based disease prediction
+
+Integration with Electronic Health Records (EHR)
+
+Mobile app for doctors
+
+Real-time hospital monitoring dashboard
+
+👩‍💻 Author
+
+Developed as part of a Healthcare Hackathon Project.
