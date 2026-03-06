@@ -1,5 +1,7 @@
 # 🏥 Smart Clinical Decision Support System (CDSS)
 
+Public URL: https://doc-mind-aid-15.lovable.app
+
 A **Smart Clinical Decision Support System (CDSS)** that helps doctors analyze patient data and receive rule-based medical recommendations.  
 The system improves decision making by detecting risks, generating alerts, and suggesting possible medical conditions using patient vitals, symptoms, and historical data.
 
